@@ -40,11 +40,15 @@ public class Login extends AppCompatActivity implements SharedPreferences.OnShar
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+
         _passwordText.setText("");
         _emailText.setText("");
+
+         _passwordText.setText("");
+
         PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
         setLogin();
-
+           
         _loginButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
