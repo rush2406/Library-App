@@ -171,12 +171,15 @@ public class ReserveActivity extends AppCompatActivity implements LoaderManager.
             String x = cursor.getString(cursor.getColumnIndex(BookContract.BookEntry.COLUMN_TAGS));
             int quant = cursor.getInt(cursor.getColumnIndex(BookContract.BookEntry.COLUMN_RESQUANT));
 
+
             name.setText(cursor.getString(nameColumnIndex));
             author.setText(cursor.getString(authColumnIndex));
             publisher.setText(cursor.getString(pubColumnIndex));
             bookid.setText(cursor.getString(bookidColumnIndex));
             tags.setText(x);
             av.setText(String.valueOf(quant));
+            if(quant>0)
+                reserve.setVisibility(View.INVISIBLE);
 
         }
 

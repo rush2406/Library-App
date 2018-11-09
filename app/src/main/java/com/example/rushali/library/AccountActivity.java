@@ -38,7 +38,7 @@ public class AccountActivity extends AppCompatActivity implements LoaderManager.
             BookContract.BookEntry.COLUMN_TOTALQUANT,
             BookContract.BookEntry.COLUMN_RESQUANT,
             BookContract.BookEntry.COLUMN_RESIDS,
-            BookContract.BookEntry.COLUMN_RESERVE,
+            BookContract.BookEntry.COLUMN_RESERVE
     };
     public static final int LOADER_ID = 100;
     BookCursorAdapter mCursorAdapter;

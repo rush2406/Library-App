@@ -101,6 +101,8 @@ public class Sign extends AppCompatActivity {
         values.put(UserContract.UserEntry.COLUMN_PASSWORD,password);
         values.put(UserContract.UserEntry.COLUMN_ISSUED,x);
         values.put(UserContract.UserEntry.COLUMN_RESERVE,x);
+        values.put(UserContract.UserEntry.COLUMN_IDATE," ");
+        values.put(UserContract.UserEntry.COLUMN_NUMBER,0);
 
 
         Uri uri = getContentResolver().insert(UserContract.UserEntry.CONTENT_URI,values);
@@ -127,9 +129,8 @@ public class Sign extends AppCompatActivity {
     public void onSignupSuccess() {
         _signupButton.setEnabled(true);
         setResult(RESULT_OK, null);
-        Intent intent = new Intent(Sign.this,AccountActivity.class);
-        intent.putExtra("name",_nameText.getText());
-        intent.putExtra("userid",_regnoText.getText());
+        Toast.makeText(getApplicationContext(),"Sign in now!",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(Sign.this,Login.class);
         startActivity(intent);
     }
 

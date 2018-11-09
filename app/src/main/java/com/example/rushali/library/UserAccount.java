@@ -3,10 +3,11 @@ package com.example.rushali.library;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.LoaderManager;
-import android.content.Loader;
+import android.support.v4.app.LoaderManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -25,9 +26,11 @@ public class UserAccount extends AppCompatActivity implements LoaderManager.Load
             UserContract.UserEntry.COLUMN_DEPT,
             UserContract.UserEntry.COLUMN_FINE,
             UserContract.UserEntry.COLUMN_RESERVE,
-            UserContract.UserEntry.COLUMN_EMAIL
+            UserContract.UserEntry.COLUMN_EMAIL,
+            UserContract.UserEntry.COLUMN_IDATE,
+            UserContract.UserEntry.COLUMN_NUMBER
     };
-    public static final int LOADER_ID = 55;
+    public static final int LOADER_ID = 60;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +52,7 @@ public class UserAccount extends AppCompatActivity implements LoaderManager.Load
 
     @NonNull
     @Override
-    public android.support.v4.content.Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
+    public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
         String[] sel = {AccountActivity.uid};
         return new CursorLoader(this,
                 UserContract.UserEntry.CONTENT_URI,
@@ -60,7 +63,7 @@ public class UserAccount extends AppCompatActivity implements LoaderManager.Load
     }
 
     @Override
-    public void onLoadFinished(@NonNull android.support.v4.content.Loader<Cursor> loader, Cursor c) {
+    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor c) {
 
         c.moveToFirst();
         String fname = c.getString(c.getColumnIndex(UserContract.UserEntry.COLUMN_UID));
@@ -77,7 +80,7 @@ public class UserAccount extends AppCompatActivity implements LoaderManager.Load
     }
 
     @Override
-    public void onLoaderReset(@NonNull android.support.v4.content.Loader<Cursor> loader) {
+    public void onLoaderReset(@NonNull Loader<Cursor> loader) {
 
     }
 }

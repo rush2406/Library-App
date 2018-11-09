@@ -4,26 +4,59 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
-  
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        tools:text="Name"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="#000000"
-        android:id="@+id/name"/>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        tools:text="BookId"
-        android:layout_alignParentRight="true"
-        android:textColor="#000000"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:id="@+id/bid"/>
-   
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_margin="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            tools:text="Name"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#000000"
+            android:id="@+id/name"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BookId"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_margin="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            tools:text="BookId"
+            android:layout_alignParentRight="true"
+            android:textColor="#000000"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:id="@+id/bid"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Author"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_margin="4dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,7 +65,19 @@
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="#000000"
             android:id="@+id/auth"/>
+    </LinearLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publisher"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_margin="4dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,39 +87,87 @@
             android:layout_alignParentRight="true"
             android:textAppearance="?android:textAppearanceMedium"
             android:id="@+id/pub"/>
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        tools:text="TotalQuant"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="#000000"
-        android:id="@+id/total"/>
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total quantity"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_margin="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            tools:text="TotalQuant"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#000000"
+            android:id="@+id/total"/>
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        tools:text="ResQuant"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="#000000"
-        android:id="@+id/res"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        tools:text="ReservedIds"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="#000000"
-        android:id="@+id/resids"/>
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current availability"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_margin="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            tools:text="ResQuant"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#000000"
+            android:id="@+id/res"/>
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        tools:text="Reservation users"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="#000000"
-        android:id="@+id/reserve"/>
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Issued ids"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_margin="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            tools:text="IssueIds"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#000000"
+            android:id="@+id/resids"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reserved ids"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_margin="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            tools:text="Reservation users"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#000000"
+            android:id="@+id/reserve"/>
+    </LinearLayout>
+
 </LinearLayout>

@@ -29,6 +29,8 @@ public class UserDbHelper extends SQLiteOpenHelper {
                 UserContract.UserEntry.COLUMN_PASSWORD + " TEXT NOT NULL, " +
                 UserContract.UserEntry.COLUMN_EMAIL + " TEXT NOT NULL, " +
                 UserContract.UserEntry.COLUMN_ISSUED + " TEXT NOT NULL, "+
+                UserContract.UserEntry.COLUMN_IDATE + " TEXT NOT NULL, "+
+                UserContract.UserEntry.COLUMN_NUMBER + " INTEGER DEFAULT 0, "+
                 UserContract.UserEntry.COLUMN_RESERVE + " TEXT NOT NULL);";
         sqLiteDatabase.execSQL(CREATE_TABLE);
 

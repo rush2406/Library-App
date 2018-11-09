@@ -36,6 +36,8 @@ public class UserContract {
         public static final String COLUMN_FINE="fine";
         public static final String COLUMN_DEPT = "dept";
         public static final String COLUMN_ISSUED="booksissued";
+        public static final String COLUMN_NUMBER="number";
         public static final String COLUMN_RESERVE="booksreserved";
+        public static final String COLUMN_IDATE="issuedate";
     }
 }

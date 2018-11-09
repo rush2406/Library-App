@@ -92,17 +92,20 @@ public class BookProvider extends ContentProvider {
                         null, null, sortOrder);
                 break;
             case USERS:
-                c = db1.query(UserContract.UserEntry.TABLE_NAME, projection, selection, selectionArgs, null, null, sortOrder);
+                if(selectionArgs==null||selectionArgs.length==0)
+                c = db1.query(UserContract.UserEntry.TABLE_NAME, projection, selection, null, null, null, sortOrder);
+                else
+                    c = db1.query(UserContract.UserEntry.TABLE_NAME, projection, selection, selectionArgs, null, null, sortOrder);
                 break;
             case USER_ID:
                 selection = UserContract.UserEntry._ID + "=?";
                 selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
-                c = db1.query(UserContract.UserEntry.TABLE_NAME, projection, selection, selectionArgs,
-                        null, null, sortOrder);
+                c = db1.query(UserContract.UserEntry.TABLE_NAME, projection, selection, selectionArgs,null, null, sortOrder);
                 break;
             default:
                 throw new UnsupportedOperationException("Unknown Uri = " + uri);
         }
+        if(c!=null)
         c.setNotificationUri(getContext().getContentResolver(), uri);
         return c;
     }

@@ -40,6 +40,8 @@ public class Login extends AppCompatActivity implements SharedPreferences.OnShar
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+        _passwordText.setText("");
+        _emailText.setText("");
         PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
         setLogin();
 
@@ -118,6 +120,7 @@ public class Login extends AppCompatActivity implements SharedPreferences.OnShar
             final Intent i = new Intent(Login.this,AccountActivity.class);
             i.putExtra("name",cursor.getString(cursor.getColumnIndex(UserContract.UserEntry.COLUMN_NAME)));
             i.putExtra("userid",cursor.getString(cursor.getColumnIndex(UserContract.UserEntry.COLUMN_UID)));
+
             new android.os.Handler().postDelayed(
                     new Runnable() {
                         public void run() {
